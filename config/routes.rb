@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   resources :clubs, except: [:new, :destroy]
   get '/affiliate', to: 'clubs#new'
+
+  resources :requests
 end
