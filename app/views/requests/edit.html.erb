@@ -1,0 +1,17 @@
+<div class = "row">
+  <div class="well col-md-4 col-md-offset-4">
+    <%= form_for @request do |f| %>
+      <p>
+        <%= f.label :amount_approved %><br/>
+        <%= f.text_field :amount_approved %>
+      </p>
+
+      <p>
+        <%= f.label :comments %><br/>
+        <%= f.text_area :comments %>
+      </p>
+
+      <%= f.submit(@request.new_record? ? 'Register' : 'Edit Decision' ,class: "btn btn-success") %>
+    <% end %>
+  </div>
+</div>

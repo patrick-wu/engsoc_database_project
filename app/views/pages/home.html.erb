@@ -2,7 +2,10 @@
 <div class = "container">
   <div class="jumbotron">
     <h1>(Skule) Club Database</h1>
-    <p>...</p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Affiliate Here!</a></p>
+    <p>
+      <%=link_to "Affiliate Now",affiliate_path,class: "btn btn-primary btn-lg"%>
+      &nbsp&nbsp&nbsp&nbsp
+      <%=link_to "Submit a Budget Request",new_request_path,class: "btn btn-info btn-lg"%>
+    </p>
   </div>
 </div>
