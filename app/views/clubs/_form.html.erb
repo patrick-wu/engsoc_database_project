@@ -7,14 +7,7 @@
       </p>
       <p>
         <%= f.label :Club_Category%><br/>
-        <%= f.radio_button :category, 'Design'%> Design
-        <%= f.radio_button :category, 'Cultural'%> Cultural
-        <%= f.radio_button :category, 'Professional'%> Professional
-        <%= f.radio_button :category, 'Musical'%> Musical <br/>
-        <%= f.radio_button :category, 'Hobby/Interest'%> Hobby/Interest
-        <%= f.radio_button :category, 'Athletic'%> Athletic
-        <%= f.radio_button :category, 'Societal'%> Societal
-        <%= f.radio_button :category, 'Fine Arts'%> Fine Arts <br/>
+        <%= select("clubs","category_id",Category.all.collect{|cat| [cat.name,cat.id]})%>
       </p>
       <p>
         <%= f.label :email%><br/>
