@@ -15,7 +15,11 @@ class ClubsController < ApplicationController
   end
 
   def index
-    @clubs=Club.all
+    if (params[:cat]&& Category.all.collect(&:name).include?(params[:cat][:name]))
+      @clubs=Club.where(category_id: Category.find_by(name: params[:cat][:name]).id)
+    else
+      @clubs=Club.all
+    end
   end
 
   def show

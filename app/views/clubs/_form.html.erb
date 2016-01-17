@@ -7,7 +7,7 @@
       </p>
       <p>
         <%= f.label :Club_Category%><br/>
-        <%= select("clubs","category_id",Category.all.collect{|cat| [cat.name,cat.id]})%>
+        <%= select("club","category_id",Category.all.collect{|cat| [cat.name,cat.id]})%>
       </p>
       <p>
         <%= f.label :email%><br/>
